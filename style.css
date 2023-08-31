@@ -1,0 +1,292 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+root {
+    font-size: 62,5%;
+    --color-base-white: #fff;
+    --color-base-blue: #387E96;
+}
+
+body{
+    background-color: #fff;
+    
+    margin: 0 auto;
+}
+
+
+
+#app{
+    
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+
+    height: 100vh;
+   
+   
+}
+
+header{
+
+    height: 7.2rem;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+
+    padding: 1.2rem 2.8rem;
+    gap:2.5rem;
+    background: #387E96;
+
+}
+
+header form{
+    flex: 1;
+}
+
+
+
+header form input{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem;
+
+    
+    background: rgba(255, 255, 255, 0.20);
+    color: #FFF;
+    
+    
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 100%;
+    
+    
+    border: none;
+    border-radius: .4rem;
+
+}
+
+header form input::placeholder{
+    color: #FFF;
+   
+}
+
+.img_logo{
+    width: 4rem;
+    height: 4rem;
+    padding: .8rem;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.img_avatar{
+    width: 4.2rem;
+    height: 4.2rem;
+    
+    border-radius: 50%;
+}
+
+.cat_content{
+
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;;
+}
+
+h1{
+
+    
+    padding-top: 3.1rem;
+    padding-left: 2.2rem ;
+    padding-bottom: .8rem ;
+
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 160%;
+
+}
+
+.like , .dislike{
+    width: 4rem;
+    height: 4rem;
+    
+    padding: 1.2rem;
+    border-radius: 50%;
+    background: #065E7C;
+
+    margin-left: 2.2rem;
+    margin-bottom: 3.1rem;
+   
+}
+
+.text{
+
+    padding: 0 2.2rem 3.4rem;
+  
+    
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    
+}
+
+.article{
+    margin-left: 2.2rem;
+    margin-right: 2.2rem;
+   
+}
+
+.article h2{
+    
+font-size: 2.4rem;
+font-weight: 700;
+line-height: 160%;
+
+margin-bottom: 3.2rem;
+
+}
+
+.article_org{
+    margin-top: 32px;
+    display: flex;
+    gap: 1.6rem;
+}
+
+.article_org img{
+    border-radius: 5px;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    
+    
+    
+  
+}
+
+h4{
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 160%
+    
+}
+
+.text_cats p{
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+
+footer{
+    display: flex;
+    width: 43.0rem;
+    height: 6.4rem;
+    padding: 1.6rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 3.9rem;
+
+    background: #387E96;
+    color: #FFF;
+
+}
+
+
+@media(min-width:425px){
+    footer{
+        width: 100%;
+    }
+}
+
+@media(min-width:1024px){
+    .header{
+        grid-area: header;
+    }
+
+    .main{
+        grid-area: main;
+    }
+
+    .article{
+        grid-area: article;
+    }
+
+    .footer{
+        grid-area: footer;
+    }
+    
+    #app{
+        
+
+                
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+    
+        grid-template-areas:
+        
+            'header header header'
+            'main main article'
+            'main main article'
+            'footer footer footer'
+
+        
+    }
+
+    main{
+        padding-left:10.9rem;
+        padding-top: 4.4rem;
+        padding-right: 3.4rem;
+    }
+
+    h1{
+        padding: 0;
+        
+    }
+
+    .text{
+        padding: 0;
+    }
+
+    .curtir_content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+    .curtir{
+        padding-top: 3.1rem;
+        display: flex;
+        align-items: center;
+       
+        
+    }
+
+    .article{
+        
+        
+        margin-top: 4.4rem ;
+        margin-right: 10.9rem;
+    }
+
+    
+}
+    
+
+
+
+
+
